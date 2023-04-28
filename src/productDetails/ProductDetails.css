@@ -1,0 +1,160 @@
+
+.productdetails {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.productdetails .imageHolder {
+    width: 40%;
+    height: 60rem;
+    padding-top: 15rem;
+    margin-top: 6rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    position: relative;
+    border-radius: 12px;  
+  }
+  .productdetails .productimage {
+    width: 50%;
+    height: 50%;
+   }
+
+  .productdetails .contact {
+   width: 50%;
+   height: 80rem;
+   display: flex;
+   flex-direction: column;
+   margin-top: 6rem;
+   margin-bottom: 3rem;
+   /* background-color: #65e551; */
+   box-shadow: -14px -10px 10px -7px rgba(158, 127, 127, 0.884);
+  }
+  .productdetails .contact .homecont {  
+    display: flex;
+    flex-direction: column;
+    margin-top: 0rem;
+    height: 5%;
+    font-size: 20px;
+    background-color: #000000;
+  }
+  .productdetails .contact .homebtn {  
+    margin-top: 0rem;
+    margin-left: auto;
+    height: 10%;
+    font-size: 15px;
+    background-color: #000000;
+    
+  }
+
+  .productdetails .contact h2 {  
+    margin: 0rem;
+    margin-top: 2rem;
+    width: 50%;
+    /* background-color: #5651e5; */
+    
+  }
+  .productdetails .contact .name {
+    font-size: 60px;
+    
+  }
+  .productdetails .contact .price {
+    font-size: 60px;
+    color: rgb(220, 34, 34);
+    width: 25%;
+    
+  }
+  .nairaicon {
+    font-size: 70px;
+    margin-right: -1rem;
+    margin-top: -0.5rem;
+  }
+  .productdetails .contact .desc {
+    font-size: 30px;
+    color: rgb(34, 139, 220);  
+    width: 25%;
+    margin-top: 3rem;
+  }
+  .productdetails .contact .description1 {
+    margin-top: 1rem;
+    margin-left: 4rem;
+    font-size: 25px;
+    width: 90%;
+    text-align: justify;
+  }
+  .productdetails .contact .description2 {
+    color: red;
+    font-weight: bolder;
+    margin-top: 1rem;
+    margin-left: 4rem;
+    font-size: 25px;
+    width: 90%;
+    text-align: justify;
+  }
+
+  .productdetails .contact .secondSection {
+    margin-top: 1rem;
+    height: 40%;
+    background-color: #f8f7f7;
+
+  }
+  .productdetails .contact .sellerbtn {
+    margin-top: 0rem;
+    width: 100%;
+    font-size: 20px;
+    /* background-color: #e587518b; */
+  }
+  .productdetails .contact .secondSection button {
+    margin-top: 1rem;
+    /* font-size: 30px; */
+    width: 20%;
+    height: 3rem;
+    /* height: fit-content; */
+    background-color: #000000;
+    border: solid 1px white;
+    box-shadow: -14px -10px 10px -10px rgba(158, 127, 127, 0.884);
+    
+  }
+  .productdetails .contact .contactseller {
+    font-size: 40px;
+    width: 100%;
+  }
+  .productdetails .contact .phone {
+    font-size: 40px;
+    width: 100%;
+  }
+  
+  .productdetails .details {
+    width: 100%;
+    /* height: 50%; */
+    /* margin: 20rem 40rem; */
+    background-color: rgb(255, 255, 255);
+    align-content: center;
+    margin-bottom: 0rem;
+    
+
+  }
+  .details h2 {
+    font-size: 150px;
+    /* background-color: #5651e5; */
+  }
+  button{
+    margin: .5rem;
+   background-color: #5651e5;
+   border-radius: 3rem;
+   color: white;
+
+  }
+  .productdetails .sellersocial {
+    width: 100%;
+    height: 5rem;
+    /* background-color: #b7b362; */
+    margin-top: 2rem;
+  }
+ .productdetails .sellersocial .icon {
+    font-size: 1rem;
+    width: 20%;
+    height: 100%;
+    /* background-color: #29d346; */
+    
+  }

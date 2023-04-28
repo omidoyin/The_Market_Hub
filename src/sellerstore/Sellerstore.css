@@ -1,0 +1,247 @@
+.sellerstore {
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+ }
+
+.sellerstore .header {
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 5rem;
+  background-color: black;
+ }
+ .sellerstore .btnspace {
+   margin-left: auto;
+ }
+ .btnspace button {
+   background-color: #000000;
+   font-size: 20px;
+ }
+.sellerstore .hero {
+   display: flex;
+   margin-top: 1rem;
+  color: rgb(0, 0, 0);
+  width: 100%;
+  height: 25rem;
+  background-color:#f8f7f7;
+ }
+ .hero .contact {
+ width: 15%;
+ margin-top: 5rem;
+ } 
+ .hero .contact p {
+  font-size: 30px;
+   } 
+
+ .hero .contact h2 {
+   width: 100%;
+   
+ } 
+ .sellerstore .sellersocial {
+   width: 100%;
+   height: 2rem;
+   /* background-color: #b7b362; */
+   margin-top: 2rem;
+ }
+ .sellerstore .icon {
+   margin-right: 12px;
+   font-size: 0.5rem;
+   width: 10%;
+   height: 100%;
+   /* background-color: #29d346; */
+   
+ }
+ .hero .name {
+   /* background-color: rgb(13, 255, 0); */
+   width: 70%;
+ } 
+ .name .mainName {
+   margin-top: 2rem;
+  font-size: 80px;
+ }
+ .name .slogan {
+  font-size: 40px;
+ }
+ .name .desc {
+   font-size: 25px;
+ }
+ .hero .logo {
+   /* background-color: rgb(52, 208, 205); */
+   /* width: 30%; */
+ }  
+ .logo .logoimage {
+   width:fit-content;
+   /* border: solid 1px black; */
+   border-radius: 30rem;
+   box-shadow: -14px -10px 10px -7px rgba(158, 127, 127, 0.884);
+ }
+
+.sellerstore .promo {
+  display: flex;
+  margin-top: 3rem;
+  color: rgb(0, 0, 0);
+  width: 100%;
+  height: 10rem;
+  background-color:#f8f7f7;
+  /* border: solid 1px black; */
+ }
+
+ .promo .banner1 {
+   /* background-color:#cec40d; */
+   width: 20%;
+   
+ }
+ .banner1 img {
+   height: 100%;
+   width: 100%;
+ }
+ .promo .promotext {
+   padding-top: 2rem;
+   /* background-color:#42dd78; */
+   width: 60%;
+ }
+ .promo .banner2 {
+   /* background-color:#c83333; */
+   width: 20%;
+ }
+ .banner2 img {
+   height: 100%;
+   width: 100%;
+ }
+
+ 
+ .sellerstore .products {
+   margin-top: 3rem;
+   color: rgb(221, 54, 54);
+   width: 100%;
+   height: 40rem;
+   background-color:#000000;
+   border: solid 1px black;
+  }
+
+  /* this is the start of new section */
+
+  
+.sellerstore .empty {
+  position: relative;
+  display: block;
+  margin: auto;
+  flex-direction: column;
+  justify-self: center;
+  width: 350px;
+  height: 350px;
+  background-color: #34373988;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .sellerstore .empty h2 {
+    font-size: 1.25rem;
+    color: #f9d3b4;
+    font-family: var(--font-raleway);
+  }
+  
+  /* creating the movie card as a flex  */
+  .sellerstore .container2 {
+    width: 100%;
+    margin-top: 3rem;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  /* the whole movie  */
+   .sellerstore .movie {
+    width: 210px;
+    height: 260px;
+    margin: 1rem;
+  
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+  
+    transition: all 4s cubic-bezier(0.175, 0.885, 0, 1);
+    /* box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1); */
+  }
+  
+  /* the year */
+  .sellerstore .movie div:nth-of-type(1) {
+    position: absolute;
+    padding: 16px;
+    width: 100%;
+    opacity: 100;
+    top: 0;
+    color: #f9d3b4;
+  }
+  /* the whole movie hover */
+  .sellerstore .movie:hover {
+    box-shadow: 0px 30px 18px -8px rgba(221, 25, 25, 0.959);
+    transform: scale(1, 1.05);
+  }
+  /* type (2) is image box, type (3) is text box  */
+  .sellerstore .movie div:nth-of-type(2) {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .sellerstore .movie div:nth-of-type(2) img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .sellerstore .movie div:nth-of-type(3) {
+    z-index: 2;
+    background-color: #343739;
+    padding: 1px 24px 0px 24px;
+  
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  
+  .sellerstore .movie div:nth-of-type(3) span {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    color: #f0f0f0;
+  }
+  
+  .sellerstore .movie div:nth-of-type(3) h3 {
+    margin-top: 1px;
+    margin-bottom: 0rem;
+    font-family: "Roboto Slab", serif;
+    color: #f9d3b4;
+    font-size: 12px;
+  }
+  .sellerstore .movie div:nth-of-type(3) button {
+    margin-top: 1px;
+    margin-bottom: 0rem;
+    padding-top: 0rem;
+    /* padding: 0.1rem; */
+    font-family: "Roboto Slab", serif;
+    border-radius: 6px;
+    color: #f9d3b4;
+    background-color: rgb(182, 113, 49);
+    /* font-size: 12px; */
+  }
+  
+  .sellerstore .movie:hover div:nth-of-type(2) {
+    /* height: 50%; */
+    opacity: 100;
+  }
+  
+  .sellerstore .movie:hover div:nth-of-type(3) {
+    /* background-color: transparent; */
+  }
+  
+  .sellerstore .movie:hover div:nth-of-type(1) {
+    opacity: 1;
+  }

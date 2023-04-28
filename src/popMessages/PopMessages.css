@@ -1,0 +1,58 @@
+.popmessage{
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   height: 100%;
+   animation: hideAnimation 0s ease-in 5s forwards;
+   /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+@keyframes hideAnimation {
+   to{
+      visibility: hidden;
+      /* width: 0;
+      height: 0; */
+   }
+   
+}
+.popmessage .container {
+   position: fixed;
+   display: flex;
+   flex-direction: column;
+   top: 200px;
+   margin-bottom: 50rem;
+   align-items: center;
+   align-content: center;
+   height: 20%;
+   width: 30%;
+   background: rgba(219, 212, 236, 0.541);
+   transition: 1s ease-in-out;
+   z-index: 10;
+   border-radius: 15px;
+
+}
+.popmessage p {
+ font-size: 21px;
+}
+.popmessageoff{
+   visibility: hidden;
+   display: none;
+   justify-content: center;
+   width: 100%;
+   height: 100%;
+}
+.popmessageoff .container {
+   position: fixed;
+   display: none;
+   flex-direction: column;
+   top: 200px;
+   margin-bottom: 50rem;
+   align-items: center;
+   align-content: center;
+   height: 40%;
+   width: 20%;
+   background: rgba(162, 185, 159, 0.87);
+   transition: 1s ease-in-out;
+   z-index: 10;
+   border-radius: 15px;
+
+}
