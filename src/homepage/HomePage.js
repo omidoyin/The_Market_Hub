@@ -99,8 +99,10 @@ setMovies(data.Search);
                             slidesToShow={5}
                             
                             >
-                               {movies.map((movie1) => (
-                                 <RecentPageCard movie1={movie1}/>
+                               {movies.map((movie1,index) => (
+                                <div>
+                                 <RecentPageCard movie1={movie1} index={index}  />
+                                 </div>
                                ))}
                             </Slider>
                           </div>
@@ -132,8 +134,8 @@ setMovies(data.Search);
               movies?.length > 0 
                 ? (
                   <div className="container2">
-                    {movies.map((movie) => (
-                      <HomePageCard movie={movie}/>
+                    {movies.map((movie, index) => (
+                      <HomePageCard movie={movie} index={index}/>
                     ))}
                   </div>
                 ): (

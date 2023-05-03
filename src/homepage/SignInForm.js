@@ -12,6 +12,7 @@ import {FaRegTimesCircle} from 'react-icons/fa';
 import { passClickStatus1 } from "../features/SignInClick";
 import { passAlert } from "../features/PopAlert";
 import { passId } from "../features/UserId";
+import Axios from "axios"
 
 
 
@@ -26,6 +27,7 @@ const SignInForm = () => {
 
 const schema = yup.object().shape({
     userName: yup.string().required("User name is Required!"),
+    email: yup.string().email().required("User name is Required!"),
     password: yup.string().min(4).required("Password is Required!"),
    })
 
@@ -41,6 +43,9 @@ const [userId, setUserId] =useState(" ")
 const onSubmit = (data)=>{
     //console.log(data);
     if(data){
+        const username =data.userName
+        const email =data.email
+        const password =data.password
         //console.log(data);
         setLogedIn(true);
         dispatch(passLogInStatus({status:logedin}))
@@ -48,7 +53,7 @@ const onSubmit = (data)=>{
 
    // post login details to backend, check if user exist and return true or false and get user id
   // const login =()=>{
-  //   Axios.post("url not provided yet", {username:username, password:password} ).then((response)=>{
+    Axios.post("https://markethubapi.vercel.app/api/users/login", {username, password, email} ).then((response)=>{
   //       if(response.data/*the data is correct?////*/){
   //           setLogedIn(true);
   //           setUserId(response.data/*///user id/*/);
@@ -56,8 +61,9 @@ const onSubmit = (data)=>{
   //           dispatch(passId({id:userId}))
   //             dispatch(passLogInStatus({status:logedin}))
   //             dispatch(passAlert({message:"login successful ", color:"green", classname:"popmessage ", icon:""}))
-    
-  //       }
+    console.log(response.data)
+        })
+   
   //       else{
    //          setLogedIn(false);
     //         setLoginErrorText = "incorrect login details, \n please enter correct login details or  click sign up to create new account";
@@ -93,14 +99,16 @@ const onSubmit = (data)=>{
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input type="text" placeholder="Username..." {...register("userName")} />
                     <p>{errors.userName?.message}</p>
+                    <input type="text" placeholder="email..." {...register("email")} />
+                    <p>{errors.email?.message}</p>
                     <input type="password" placeholder="Password..." {...register("password")} />
                     <p>{errors.password?.message}</p>
                     <input type="submit" />
                    {/*  <p>{message}</p> */}
                 </form>
                 <div className="inapiMessage">
-                    {loginErrorText.split('\n').map((paragraph) => {
-                        return <h2>{paragraph}</h2>;
+                    {loginErrorText.split('\n').map((paragraph, index) => {
+                        return <h2 key={index}>{paragraph}</h2>;
                     })}
                      
                     {/* <h2>{String(signInstatusclick)}</h2> */}

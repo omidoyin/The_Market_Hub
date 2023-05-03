@@ -19,7 +19,7 @@ const EditProfile = () => {
     const [profileclick, setProfileClick] =useState(false)
     const handleprofileClick =() => setProfileClick(!profileclick)
     
-    useEffect(()=>{document.addEventListener("click", handleClickOutside, true)}, [])
+    // useEffect(()=>{document.addEventListener("click", handleClickOutside, true)}, [])
 
     const refclick = useRef(null)
     const handleClickOutside =(e) => {

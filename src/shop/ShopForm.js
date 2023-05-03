@@ -19,7 +19,7 @@ const ShopForm = () => {
     const [addProductClick, setAddProductClick] =useState(false)
     const handleAddProductClick =() => setAddProductClick(!addProductClick)
 
-    useEffect(()=>{document.addEventListener("click", handleClickOutside, true)}, [])
+    // useEffect(()=>{document.addEventListener("click", handleClickOutside, true)}, [])
 
     const refclick = useRef(null)
     const handleClickOutside =(e) => {

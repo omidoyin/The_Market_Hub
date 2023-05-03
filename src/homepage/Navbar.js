@@ -65,17 +65,18 @@ const Navbar = () => {
           <div className = 'container'>
         
               {/* <h1><span><BsFillHouseFill/>Real</span>Estate</h1> */}
-              <button className= 'signInbtn' onClick={signinbtnhandleClick}>Sign In </button> 
-
-              <button className='signUpbtn' onClick={signUpBtnHandleClick}>Sign Up/Create Shop </button>
-             
-             
-              {/* /*IF LOGINSTATUS IS TRUE go to shop page, set the id there, and fetch the data from api."**/}
-              <button className='myshopbtn'  onClick={()=>{
-                if(!isLogedIn){  navigate("/shop");  } 
-                else{/*"prompt the user to sign in or create a shop"*/
-                dispatch(passAlert({message:"please log in or create a new shop ", color:"red", classname:" popmessage", icon:""}))}}}> My Shop </button>
-                
+              <div className="buttons">
+                  <button className= 'signInbtn' onClick={signinbtnhandleClick}>Sign In </button> 
+    
+                  <button className='signUpbtn' onClick={signUpBtnHandleClick}>Sign Up/Create Shop </button>
+                 
+                 
+                  {/* /*IF LOGINSTATUS IS TRUE go to shop page, set the id there, and fetch the data from api."**/}
+                  <button className='myshopbtn'  onClick={()=>{
+                    if(!isLogedIn){  navigate("/shop");  } 
+                    else{/*"prompt the user to sign in or create a shop"*/
+                    dispatch(passAlert({message:"please log in or create a new shop ", color:"red", classname:" popmessage", icon:""}))}}}> My Shop </button>
+              </div>  
               
               {/* Displayed menu implementation STARTS*/}
               <ul className= 'nav-menu'   >

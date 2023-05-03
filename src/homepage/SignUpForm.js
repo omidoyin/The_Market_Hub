@@ -12,6 +12,7 @@ import {FaRegTimesCircle} from 'react-icons/fa';
 import { passClickStatus } from "../features/SignUpClick";
 import { passAlert } from "../features/PopAlert";
 import { passId } from "../features/UserId";
+import Axios from "axios"
 
 const SignUpForm = () => {
 
@@ -37,10 +38,18 @@ const [loginErrorText, setLoginErrorText] =useState(" ")
 
 const onSubmit = (data)=>{
     //console.log(data);
+    
     if(data){
-        //console.log(data);
+        console.log(data);
+        const username = data.userName;
+        const email = data.email;
+        const password = data.password;
+        console.log(username);
+    try{
+
+   
         // this will create a new user in the backend
-       // Axios.post("url not provided yet", {username:username, password:password} ).then((response)=>{
+       Axios.post("https://markethubapi.vercel.app/api/users/create", {email,password,username} ).then((response)=>{
       //       if(response.data/*the data is correct?////*/){
       //           setLogedIn(true);
       //           setUserId(response.data/*///user id/*/);
@@ -49,7 +58,10 @@ const onSubmit = (data)=>{
       //             dispatch(passLogInStatus({status:logedin}))
       //             dispatch(passAlert({message:"account created successfully ", color:"green", classname:" popmessage", icon:""}))
         
-      //       }
+            })
+        } catch (error) {
+            console.log(error.message)
+        }
       //       else{
        //          setLogedIn(false);
         //         setLoginErrorText(" please try and signup again")

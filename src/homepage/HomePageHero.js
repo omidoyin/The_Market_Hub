@@ -34,8 +34,8 @@ const HomePageHero =()=>{
                         autoplaySpeed={6000}
                            >
                              {
-                                 HeroTexts.map(items=>(
-                                     <div>
+                                 HeroTexts.map((items, index)=>(
+                                     <div key={index}>
                                          <h2>{items}</h2>
                                      </div>
                                  ))

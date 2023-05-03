@@ -2,10 +2,10 @@ import React from "react";
 import './HomePage.css'
 
 
-const RecentPageCard = ({movie1}) => {
+const RecentPageCard = ({movie1,index}) => {
 
     return(
-        <div className="movie1">
+        <div className="movie1" key={index}>
           <div>
              <p>{movie1.Year}</p>
           </div>

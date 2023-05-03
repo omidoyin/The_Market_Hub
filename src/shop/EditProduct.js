@@ -21,7 +21,7 @@ const EditProduct = () => {
     const handleMouseLeave = () => {
         seteditproductclick(false)
     }
-    useEffect(()=>{document.addEventListener("click", handleClickOutside, true)}, [])
+    // useEffect(()=>{document.addEventListener("click", handleClickOutside, true)}, [])
 
     const refclick = useRef(null)
     const handleClickOutside =(e) => {

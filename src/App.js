@@ -6,6 +6,7 @@ import HomePage from './homepage/HomePage';
 import { BrowserRouter as Router, Routes, Route,Navigate, Link } from 'react-router-dom';
 import ProductDetails from './productDetails/ProductDetails';
 import Sellerstore from './sellerstore/Sellerstore';
+import Test from './shop/Test';
 
 function App() {
   
@@ -20,6 +21,7 @@ function App() {
           <Route path='/shop' element={<Shop/>}/>
           <Route path='/productdetails' element={<ProductDetails/>}/>
           <Route path='/sellerstore' element={<Sellerstore/>}/>
+          <Route path='/test' element={<Test/>}/>
         </Routes>
 
       </Router>

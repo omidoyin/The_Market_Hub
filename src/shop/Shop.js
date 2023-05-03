@@ -10,6 +10,7 @@ import { useSelector } from "react-redux";
 import { BrowserRouter as Router, Routes, Route,Navigate, Link ,useNavigate} from 'react-router-dom';
 import EditProfile from "./EditProfile";
 import PopMessages from "../popMessages/PopMessages";
+import image from "../assets/promoBarner2.PNG"
 
 
 const API_URL = 'http://www.omdbapi.com?apikey=2c014251';
@@ -48,40 +49,31 @@ let navigate2 = useNavigate();
 
     return(
         <div className = 'shop'>
-          
-          {/* <div className="hamburger" onClick={handleClick}>
-                {click? (<div><FaRegTimesCircle className="icon"/> </div>) : (<HiOutlineMenuAlt4 className="icon"/>)}
-              
-              </div> 
-              */}
-              
-         
-          <div className = 'container'>
-        
-             
+          <div className="testing">
+
+          </div>
+          <div className = 'shopcontainer'>
               <button  onClick={()=>{navigate2("/sellerstore")}} className= 'mystorebtn'>My Store </button> 
               <button onClick={()=>{navigate2("/")}} className="homebtn">Home</button>
               <ShopForm/> 
               <EditProfile/>
               
-          </div> 
+         </div> 
               
          
 
-              <div className="hero">
-                 <h1 className='header'> Ayodeji Wears and Fashion Show</h1>
-                 <h2 className='welcome'>Home of Bespoke wears</h2>
-                 <p className='descr'>This is a fashion empire that provides you with made to taste wears</p>          
-                 
-             </div> 
-             <PopMessages/>
+           <div className="hero">
+              <h1 className='header'> Ayodeji Wears and Fashion Show</h1>
+              <h2 className='welcome'>Home of Bespoke wears</h2>
+              <p className='descr'>This is a fashion empire that provides you with made to taste wears</p>          
+           
+          </div> 
+            <PopMessages/>
 
 
-              <div className="control">
+          <div className="control">
                 <div className="profile">
-                  
-                   
-                   
+      
                    <div className="profileDetails">
                        <h2>Name of shop owner</h2>
                       <h2>Shop Name</h2>
@@ -94,8 +86,9 @@ let navigate2 = useNavigate();
                    </div>
 
                 </div>
+                {/* https:via.placeholder.com/400 */}
                 <div className="shopLogo">
-                <img src="https:via.placeholder.com/400" alt="" className="circle"/>
+                   <img src={image} alt="" className="circle"/>
                  {/* <ShopForm/> 
                  <EditProfile/> */}
                  
@@ -103,7 +96,7 @@ let navigate2 = useNavigate();
                 </div>
                
                  
-             </div> 
+          </div> 
               
             <div>
                 
