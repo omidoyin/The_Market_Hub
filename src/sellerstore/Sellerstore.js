@@ -94,7 +94,7 @@ setMovies(data.Search);
       </div>
 
       <div className='products'>
-         <h2> api fetch images bellow  </h2>
+        
          {/* product card implementation start*/}
              
          { 

@@ -22,16 +22,6 @@
     color: #1e17cf;
   }
   .navbar button{
-    /* margin: .5rem; */
-    /* margin-left: .3rem;
-    margin-top: 4rem;
-   background-color: #5651e5;
-   border-radius: 3rem;
-   color: white;
-   position: absolute;
-   display: flex;
-   flex-direction: row; */
-   /* justify-content: space-between; */
    border-radius: 9px;
   }
   .navbar .buttons {
@@ -39,7 +29,8 @@
    flex-direction: row;
    justify-content: space-evenly;
    margin-left: 10rem;
-   
+   margin-top: -13px;
+   justify-content: center;
    align-items:center;
    color: #be996e;
   }
@@ -73,13 +64,13 @@
   }
  
   .navbar .nav-menu .btnlist1 {
-    margin-top: -3.5rem;
+    margin-top: -3rem;
     margin-left: 1rem;
     display: flex;
     flex-direction: row;
     /* width: 60rem; */
     height: 2rem;
-    
+    justify-content: center;
     align-items: center;
   }
   .navbar .nav-menu .btnlist1 button {
@@ -182,8 +173,8 @@
     margin-bottom: 50rem;
     align-items: center;
     align-content: center;
-    height: 65%;
-    width: 450px;
+    min-height: 68%;
+    min-width:330px;
     background: rgba(143, 123, 190, 0.6);
     transition: 1s ease-in-out;
     z-index: 10;
@@ -229,8 +220,8 @@
   .main .apiMessage{
     position: absolute;
     display: block;
-    top: 30rem;
-    width: 100%;
+    top: 33rem;
+    width: 90%;
     background: #1e17cf;
     z-index: 10;
   }
@@ -251,8 +242,8 @@
    margin-bottom: 50rem;
    align-items: center;
    align-content: center;
-   height: 60%;
-   width: 450px;
+   min-height: 50%;
+   min-width: 330px;
    background: rgba(143, 123, 190, 0.6);
    transition: 1s ease-in-out;
    z-index: 10;
@@ -281,7 +272,7 @@
    margin-right: 13.5rem; */
    display: flex;
    flex-direction: column;
-   width: 90%;
+   min-width: 90%;
    right: auto;
    justify-content: center;
    background-color: #90679c;
@@ -298,8 +289,8 @@
  .inmain .inapiMessage{
    position: absolute;
    display: block;
-   top: 25rem;
-   width: 100%;
+   top: 22rem;
+   width: 90%;
    background: #1e17cf;
    color: red;
    z-index: 10;
@@ -370,5 +361,24 @@ margin: 1rem;
       font-size: 12px;
      
     }
-    
   }
+  @media screen and (max-width: 426px) {
+    .navbar .hamburger {
+      margin-left: -35px;
+      }
+    .navbar .buttons {
+     margin-left: 1.6rem;
+    }
+    .navbar .myshopbtn{
+      font-size: 11px;
+    }
+    .navbar .signUpbtn{
+      font-size: 11px;
+     
+    }
+    .navbar .signInbtn{
+      font-size: 11px;
+     
+    }
+  }
+ 

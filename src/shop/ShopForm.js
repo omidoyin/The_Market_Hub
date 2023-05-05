@@ -34,11 +34,12 @@ const ShopForm = () => {
  // to post product, all the fields are not required
  // any empty field should not be altered in the BackEnd
 const schema = yup.object().shape({
-    ProductName: yup.string().required("User name is Required!"),
-    Price: yup.string().required("User name is Required!"),
-    Description1: yup.string().required("User name is Required!"),
-    Description2: yup.string().required("User name is Required!"),
+    ProductName: yup.string().required("Product/Service name is Required!"),
+    Price: yup.string().required("Price is Required!"),
+    Description1: yup.string().required("Please write a description of the product/service!"),
+    Description2: yup.string(),
     productType: yup.string().required(" Please Choose the type of Product"),
+    Image: yup.mixed(),
     
    })
 
@@ -108,6 +109,8 @@ const onSubmit = (data)=>{
                     <p>{errors.Description1?.message}</p>
                     <input type="text" placeholder="Bonus/Offer..." {...register("Description2")} />
                     <p>{errors.Description2?.message}</p>
+                    <input type="file" placeholder="upload a picture"  {...register("image")} />
+                    <p>{errors.Image?.message}</p>
                     <label>Product Category</label>
                     <div className="radiobtn">
                          <label> clothing<input type="radio" value='Clothing'  {...register('productType', {required:true})}/>  </label>
@@ -116,15 +119,9 @@ const onSubmit = (data)=>{
                          <label> Services <input type="radio" value='Services'  {...register('productType', {required:true})}/> </label>
                          </div>
                          <p>{errors.productType?.message}</p>
-                    <input type="submit" />
+                    <input type="submit"  value="Post Product/Service"/>
                    {/*  <p>{message}</p> */}
-                </form>
-                <div className="addproductapiMessage">
-                    <h2> welcome message controlled by Api</h2>
-                
-                </div>
-
-                
+                </form>         
             </div>
 
             <button onClick={handleAddProductClick} className= 'addproductbtn'>Add Products </button>

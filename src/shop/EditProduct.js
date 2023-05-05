@@ -44,6 +44,7 @@ const schema = yup.object().shape({
     Description1: yup.string().required("User name is Required!"),
     Description2: yup.string().required("User name is Required!"),
     productType: yup.string().required(" Please Choose the type of Product"),
+    Image: yup.mixed(),
    })
 
 const {register, handleSubmit, formState: {errors}} = useForm({
@@ -114,6 +115,8 @@ const onSubmit = (data)=>{
                     <p>{errors.Description1?.message}</p>
                     <input type="text" placeholder="Bonus/Offer..." {...register("Description2")} />
                     <p>{errors.Description2?.message}</p>
+                    <input type="file" placeholder="upload a picture" {...register("image")} />
+                    <p>{errors.Image?.message}</p>
                     <label>Product Category</label>
                     <div className="radiobtn">
                          <label> clothing<input type="radio" value='Clothing'  {...register('productType', {required:true})}/>  </label>

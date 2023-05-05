@@ -50,13 +50,13 @@
   margin-top: 2rem;
   margin-right: auto;
   margin-left: 2rem;
-  height: 45rem;
+  height: 40rem;
  
   /* background-color: aqua; */
 }
 .homepage .backgroundImage .layer1 img { 
-  height: 200px;
-  height: 200px;
+  /* height: 100px; */
+  height: 150px;
   margin-left: 6rem;
   margin-top: 2rem;
   opacity: 0.5;
@@ -68,7 +68,7 @@
 .homepage .backgroundImage .storeName { 
   margin-top: -5rem;
   /* margin-right: auto; */
-  margin-left: -20rem;
+  margin-left: -28rem;
   margin-bottom: 5rem;
   height: 5rem;
   font-size: 60px;
@@ -94,6 +94,7 @@ color: blue;
 font-size: 50px;
 align-items: center;
 background-color: rgba(163, 163, 103, 0.199);
+margin-top: 30px;
 
 }
 
@@ -118,9 +119,10 @@ background-color: rgba(163, 163, 103, 0.199);
   height: 45rem;
 }
 .homepage .backgroundImage .layer3 img { 
-  height: 200px;
+  height: 150px;
   opacity: 0.8;
   border-radius: 10px;
+  margin-top: 100px;
 }
 
 
@@ -157,10 +159,8 @@ background-color: rgba(163, 163, 103, 0.199);
 
     /* the whole movie  */
     .homepage .movie1 {
-
-      min-width: 20rem;
       height: 260px;
-      margin: 1rem;
+      margin: .5rem;
       position: relative;
       border-radius: 10px;
       overflow: hidden;
@@ -400,7 +400,7 @@ background-color: rgba(163, 163, 103, 0.199);
     } 
     .homepage .backgroundImage .layer1 img { 
       height: 150px;
-      margin-top: 3rem;
+      margin-top:2rem;
       /* width: 200px; */
     }
     .homepage .backgroundImage .layer3 img { 
@@ -415,6 +415,23 @@ background-color: rgba(163, 163, 103, 0.199);
     .homepage .container2 {
       grid-template-columns: repeat(3,1fr);
     } 
+    .homepage .homePageHero .storeName {
+      position: absolute;
+      font-size: 50px;
+      margin-left: 60px;
+      margin-top: 160px;
+    }
+    .homepage .backgroundImage .layer1 img { 
+      height: 100px;
+      margin-top: .5rem;
+    }
+    .homepage .backgroundImage .layer3 img { 
+      height: 100px;
+      margin-top: 160px;
+    }
+    .homepage .homePageHero .layer2 {
+      margin-top: 80px;
+    }
   }
   @media screen and (max-width:900px) {
     .homepage .backgroundImage { 
@@ -434,14 +451,11 @@ background-color: rgba(163, 163, 103, 0.199);
     }
   }
   @media screen and (max-width:800px) {
-    .homepage .container2 {
-      grid-template-columns: repeat(2,1fr);
-    } 
     .homepage .backgroundImage { 
       display: flex;
       flex-direction: column;
       width:100%;
-      height: 60vh;
+      height: 70vh;
       
     }
     .homepage .homePageHero {
@@ -450,51 +464,56 @@ background-color: rgba(163, 163, 103, 0.199);
     
     .homepage .backgroundImage .layer1 img { 
       height: 100px;
-      margin-top: 1rem;
+      margin-top: .5rem;
     }
     .homepage .backgroundImage .layer3 img { 
       height: 100px;
-      margin-bottom: -5rem;
+      margin-bottom: auto;
     }
    
     .homepage .homePageHero .storeName {
       font-size: 40px;
-      padding-left: 60px;
+      margin-left: 60px;
+      margin-top: 160px;
     }
     .homepage .homePageHero .layer2 h2 {
       font-size: 25px;
     }
+    .homepage .backgroundImage .innerlayer2 { 
+
+      width:70%;
+      height: 5rem;
+    }
+    .slick-arrow.slick-prev,
+    .slick-arrow.slick-next {
+      width: 40px;
+      height: 80px;
+    }
+    .homepage .container2 {
+      grid-template-columns: repeat(2,1fr);
+    } 
   }
   @media screen and (max-width: 760px) {
-    .homepage .backgroundImage { 
-      display: flex;
-      flex-direction: column;
-      width:100%;
-      height: 50vh;
+    .homepage .backgroundImage {   
+      height: 60vh;
     }
     .homepage .backgroundImage .layer1 img { 
-      height: 100px;
-      margin-top: -1rem;
+      height: 80px;
+      margin-top: -.5rem;
     }
     .homepage .homePageHero .storeName {
-      margin-top: 20px;
       font-size: 40px;
-      padding-left: 60px;
+      margin-left: 60px;
+      margin-top: 110px;
     }
     
     .homepage .backgroundImage .layer3 img { 
-      height: 100px;
-      margin-bottom: 4rem;
-      margin-top: 20px;
+      height: 80px;
+      /* margin-bottom: 0; */
+      margin-top: 70px;
     }
   }
   @media screen and (max-width: 630px) {
-    .homepage .backgroundImage { 
-      display: flex;
-      flex-direction: column;
-      width:100%;
-      height: 50vh;
-    }
 
     .homepage .container2 {
       grid-template-columns: repeat(1,1fr);
@@ -504,18 +523,43 @@ background-color: rgba(163, 163, 103, 0.199);
     }
     
     .homepage .backgroundImage .layer1 img { 
-      height: 100px;
-      margin-top: 1rem;
+      margin-top: -.5rem;
     }
-    .homepage .backgroundImage .layer3 img { 
-      height: 100px;
-      margin-bottom: -6rem;
-      margin-top: -20px;
-    }
-   
+  
     .homepage .homePageHero .storeName {
-      font-size: 30px;
-      padding-left: 100px;
+      font-size: 35px;
+      padding-left: 20px;
     }
   }
+  @media screen and (max-width: 426px) {
+    .homepage .backgroundImage { 
+      height: 40vh;
+    }
+
+    .homepage .homePageHero {
+      height: auto;
+    }
+    
+    .homepage .backgroundImage .layer1 img { 
+      height: 60px;
+      margin-top: -1rem;
+      margin-left: 0;
+    }
+    .homepage .backgroundImage .layer3 img { 
+      height: 60px;
+      margin-bottom: 0rem;
+      margin-top: 2px;
+    }
+    .homepage .homePageHero .storeName {
+      font-size: 20px;
+      margin-left: 0px;
+      margin-top: 90px;
+    }
+    .homepage .homePageHero .layer2 h2 {
+      font-size: 17px;
+     
+    }
+  
+  }
+ 
  

@@ -33,7 +33,9 @@
     
     margin: .5rem;
    background-color: #000000;
-   border-radius: 3rem;
+   border: none;
+   border-bottom: solid white 2px;
+   border-radius: 2rem;
    border-color: #ffffff;
    color: white;
    z-index: 10;
@@ -181,35 +183,27 @@
 
 
 
-/* this is the fourth section*/
+/*-------------------- this is the fourth section----------------------*/
 
 .shop .editprofile {
-  /* position: absolute; */
   display: flex;
   justify-content: center;
   width: 100%;
   height: 100%;
   margin-top: -5rem;
-  /* margin: auto; */
-  /* margin-left: 5rem;
-  margin-right: 55rem; */
-  /* background-color: #00000100; */
-  /* background:none;
-  border: none; */
-
  }
 
  .editprofile .clickeditprofile {
    position: fixed;
    display: flex;
    flex-direction: column;
-   top: 100px;
+   top: 90px;
    margin-bottom: 50rem;
    align-items: center;
    align-content: center;
    /* height: 70%; */
-   height: 50rem;
-   /* width: 30%; */
+   height: 47rem;
+   min-width: 330px;
    background: rgba(69, 10, 208, 0.6);
    transition: 1s ease-in-out;
    z-index: 11;
@@ -238,15 +232,24 @@
   height: fit-content;
   width: fit-content;
   background-color: #000000;
-  border-radius: 3rem;
+  border-radius: 0rem;
   border-color: #ffffff;
   color: white;
   font-size: 16px;
+  border: none;
+  transition: transform 1s;
+  border-bottom: white solid 2px;
+  
+ }
+ .shop .editprofile button:hover {
+  transform: scale(1.05);
+  background-color: #fcfcfc;
+  color: rgb(0, 0, 0);
  }
 
  .clickeditprofile form{
    position: absolute;
-   margin-top: 5rem;
+   margin-top: 4rem;
    /* margin-top: 10rem;
    margin-bottom: 0.5rem;
    margin-right: 13.5rem; */
@@ -262,6 +265,7 @@
  .shop .editprofile form input{
    padding: .5rem;
    margin: .3rem;
+   margin-bottom: 0;
    height: 15%;
    border-radius: .5rem; 
    border: solid rgb(81, 81, 88) 0.2px;
@@ -271,19 +275,20 @@
   font-size: 20px;
   
 }
- .editprofile .editapiMessage{
+ /* .editprofile .editapiMessage{
    margin-top: auto;
-   margin-bottom: 2rem;
-   width: 100%;
+   margin-bottom: 1rem;
+   height: 70px;
+   width: 90%;
    background: #1e17cf;
    z-index: 10;
- }
+ } */
 
 
 
 
 
- /* this is the fifth section*/
+ /* ----------------this is the fifth section------------------------*/
 
 .shop .shopform {
   /* position: absolute; */
@@ -308,7 +313,8 @@
    margin-bottom: 50rem;
    align-items: center;
    align-content: center;
-   height: 70%;
+   min-height: 70%;
+   min-width:330px;
    /* width: 30%; */
 
    background: rgba(69, 10, 208, 0.6);
@@ -339,10 +345,17 @@
   height: fit-content;
   width: fit-content;
   background-color: #000000;
-  border-radius: 3rem;
-  border-color: #ffffff;
+  border-radius: 0rem;
+  border: none;
+  border-bottom: white 2px solid;
   color: white;
   font-size: 16px;
+  transition: transform 1.5s;
+ }
+ .shopform button:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  transform: scale(1.05);
  }
 
  .addproduct form{
@@ -356,12 +369,12 @@
    width: 90%;
    right: auto;
    justify-content: center;
-   background-color: #90679c;
+   background-color: #471c7d;
    border-radius: 1rem;
  }
 
  .shop .shopform form input{
-   padding: .5rem;
+   padding: .3rem;
    margin: .3rem;
    height: 15%;
    border-radius: .5rem; 
@@ -372,22 +385,21 @@
  }
  .shop .shopform label {
   margin-left: 1rem;
+  font-size: 15px;
  }
  .shop .shopform p {
   color: rgb(214, 22, 22);
-  font-size: 20px;
+  font-size: 18px;
+  margin: 0;
  }
 
- .shopform .addproductapiMessage{
-   /* position: absolute; */
-   /* display: block; */
-   /* top: 26rem; */
-   width: 100%;
+ /* .shopform .addproductapiMessage{
+   width: 90%;
    background: #1e17cf;
    margin-top: auto;
    margin-bottom: 2rem;
    z-index: 10;
- }
+ } */
 
 
 
@@ -421,17 +433,19 @@
     margin-top: 3rem;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    gap: .5rem;
+    padding: 1rem;
    
   }
   
   /* the whole movie  */
    .shop .movie {
+    padding: .5rem;
     display: flex;
     flex-direction: column;
-    height: 600px;
-     margin: 2rem;
+    height: 600px; 
     position: relative;
     border-radius: 10px;
     /* overflow: hidden; */
@@ -574,7 +588,7 @@
      margin-bottom: 50rem;
      align-items: center;
      align-content: center;
-     height: 70%;
+     height: 80%;
      width: 90%;
      background: rgba(69, 10, 208, 0.6);
      transition: 1s ease-in-out;
@@ -615,7 +629,7 @@
      margin-right: 13.5rem; */
      display: flex;
      flex-direction: column;
-     width: 100%;
+     width: 95%;
      right: auto;
      justify-content: center;
      background-color: #90679c;
@@ -624,19 +638,22 @@
   
    .shop .editproduct form input{
      padding: .5rem;
-     margin: .3rem;
+     /* margin: .3rem; */
      height: 15%;
      border-radius: .5rem; 
      border: solid rgb(81, 81, 88) 0.2px;
    }
-   .editproduct .editapiMessage{
+   .editproduct .radiobtn label {
+    margin-left: 8px;
+   }
+   /* .editproduct .editapiMessage{
      position: absolute;
      display: block;
      top: 26rem;
      width: 100%;
      background: #1e17cf;
      z-index: 10;
-   }
+   } */
 
    @media screen and (max-width:1300px) {
   
@@ -693,7 +710,7 @@
       grid-template-columns: repeat(3,1fr);
     }
    }
-   @media screen and (max-width:900px) {
+   @media screen and (max-width:1026px) {
     .shop .container2 {
       grid-template-columns: repeat(2,1fr);
     }
@@ -746,5 +763,66 @@
    @media screen and (max-width: 630px) {
     .shop .container2 {
       grid-template-columns: repeat(1,1fr);
+    }
+   }
+   @media screen and (max-width: 426px) {
+    .shop .header {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    .shop .welcome {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+    .shop .descr {
+      font-size: 20px;
+    }
+    .shop .homebtn {
+      margin-left: -16rem;
+     margin-top: 0rem;
+     margin-bottom: 0rem;
+     font-size: 11px;
+   }
+    .shop .mystorebtn {
+      position: absolute;
+      margin-right: auto;
+     margin-left: -9rem;
+     margin-top: 0rem;
+     margin-bottom: 0rem;
+     font-size: 11px;
+    }
+    .shop .editprofile button {
+      margin-top: 1.7rem;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: 6rem;
+      font-size: 11px;
+     }
+     .shopform button {
+      margin-top: 1.7rem;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: 0.5rem;
+      font-size: 11px;
+     }
+    .shop .shopLogo {
+      width: 19rem;
+      height: 26rem;
+      margin: 0rem;
+      margin-top: 2rem;
+    }
+    .shop .shopLogo img {
+      width: 90%; 
+      padding: 10px;
+    }
+    .shop .profile {
+      width: 19rem;
+    }
+    .shop .profileDetails {
+      width: 17rem;
+      height: 22em;
+    }
+    .shop .movie {
+      min-width: 100px; 
     }
    }

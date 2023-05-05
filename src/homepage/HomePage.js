@@ -56,7 +56,39 @@ setMovies(data.Search);
   useEffect(() =>{ searchMovies('spiderman');},  []);
 // for product card display end
 
+const properties ={
+  autoplay:true, 
+  prevArrow:<PreviousBtn/>,
+  nextArrow:<NextBtn/>,
+  slidesToShow:5,
+  responsive : [
+   {
+     breakpoint:600,
+     settings: {
+      slidesToShow:1
+     }
+   },
+   {
+    breakpoint:800,
+    settings: {
+     slidesToShow:2
+    }
+  },
+  {
+    breakpoint:1100,
+    settings: {
+     slidesToShow:3
+    }
+  },
+  {
+    breakpoint:1300,
+    settings: {
+     slidesToShow:4
+    }
+  },
 
+  ]
+}
 
 
 
@@ -89,14 +121,11 @@ setMovies(data.Search);
               
                    { 
                      movies?.length > 0 
-                       ? (
+                       ? ( 
                         
-                          <div style={{margin:"70px"}} className="container3">
+                          <div style={{margin:"30px"}} className="container3">
                             <Slider 
-                            autoplay 
-                            prevArrow={<PreviousBtn/>}
-                            nextArrow={<NextBtn/>}
-                            slidesToShow={5}
+                           {...properties}
                             
                             >
                                {movies.map((movie1,index) => (

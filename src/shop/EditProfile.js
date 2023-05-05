@@ -125,13 +125,7 @@ const onSubmit = (data)=>{
                     <p>{errors.logo?.message}</p>
                     <input type="submit" />
                    {/*  <p>{message}</p> */}
-                </form>
-                <div className="editapiMessage">
-                    <h2> welcome message controlled by Api</h2>
-                
-                </div>
-
-                
+                </form>     
             </div>
 
             <button onClick={handleprofileClick} className= 'editbtn'>Edit My Profile </button>

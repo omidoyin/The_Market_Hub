@@ -39,3 +39,8 @@
         color: #5651e5;
     }
 }
+@media screen and (max-width:376px) {
+    .footer .icon{
+        margin:2rem 1rem;
+    }
+}

@@ -61,7 +61,7 @@ const onSubmit = (data)=>{
   //           dispatch(passId({id:userId}))
   //             dispatch(passLogInStatus({status:logedin}))
   //             dispatch(passAlert({message:"login successful ", color:"green", classname:"popmessage ", icon:""}))
-    console.log(response.data)
+    console.log(response)
         })
    
   //       else{
