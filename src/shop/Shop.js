@@ -108,8 +108,8 @@ let navigate2 = useNavigate();
               movies?.length > 0 
                 ? (
                   <div className="container2">
-                    {movies.map((movie) => (
-                      <ShopCard movie={movie}/>
+                    {movies.map((movie, index) => (
+                      <ShopCard movie={movie} key={index}/>
                     ))}
                   </div>
                 ): (

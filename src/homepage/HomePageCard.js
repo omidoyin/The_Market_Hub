@@ -1,10 +1,10 @@
 import React from "react";
 import './HomePage.css'
 
-const HomePageCard = ({movie, index}) => {
+const HomePageCard = ({movie}) => {
 
     return(
-        <div className="movie" key={index}>
+        <div className="movie">
           <div>
              <p>{movie.Year}</p>
           </div>

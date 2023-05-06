@@ -101,8 +101,8 @@ setMovies(data.Search);
               movies?.length > 0 
                 ? (
                   <div className="container2">
-                    {movies.map((movie) => (
-                      <SellerStoreCard movie={movie}/>
+                    {movies.map((movie, index) => (
+                      <SellerStoreCard movie={movie} key={index}/>
                     ))}
                   </div>
                 ): (

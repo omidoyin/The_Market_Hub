@@ -18,15 +18,21 @@ const EditProfile = () => {
     
     const [profileclick, setProfileClick] =useState(false)
     const handleprofileClick =() => setProfileClick(!profileclick)
-    
-    // useEffect(()=>{document.addEventListener("click", handleClickOutside, true)}, [])
 
-    const refclick = useRef(null)
-    const handleClickOutside =(e) => {
-        if(!refclick.current.contains(e.target)){
-            setProfileClick(false)
+    const refclick = useRef()
+    useEffect(()=>{
+        const handleClickOutside =(e) => {
+            if(!refclick.current.contains(e.target)){
+                setProfileClick(false)
+            }
         }
-    }
+        window.addEventListener("click", handleClickOutside, true);
+        return () => {window.removeEventListener("click", handleClickOutside, true)};
+    
+    }, [])
+
+    
+   
 
     const userId = useSelector((state) => state.user.value.id);
  const dispatch = useDispatch();
@@ -100,9 +106,9 @@ const onSubmit = (data)=>{
     
   
     return(
-        <div className="editprofile">
+        <div className="editprofile"  ref={refclick}>
 
-            <div className= { profileclick? "clickeditprofile" :'clickeditprofileoff'} ref={refclick} >
+            <div className= { profileclick? "clickeditprofile" :'clickeditprofileoff'} >
                 <div className="editcloseIcon"><FaRegTimesCircle onClick={handleprofileClick /*newSignInClickStatus*/}/></div>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input type="text" placeholder="Username..." {...register("userName")} />

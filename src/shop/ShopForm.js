@@ -19,14 +19,23 @@ const ShopForm = () => {
     const [addProductClick, setAddProductClick] =useState(false)
     const handleAddProductClick =() => setAddProductClick(!addProductClick)
 
-    // useEffect(()=>{document.addEventListener("click", handleClickOutside, true)}, [])
+   
+    const refclick1 = useRef()
+   
+    useEffect(()=>{
+        const handleClickOutside =(e) => {
+            if(!refclick1.current.contains(e.target)){
+                 console.log("hello") 
+                 setAddProductClick(false)
+            }
+        } 
+        window.addEventListener("click", handleClickOutside,true);
+       return () => {window.removeEventListener("click", handleClickOutside, true)};
+     }, []) 
 
-    const refclick = useRef(null)
-    const handleClickOutside =(e) => {
-        if(!refclick.current.contains(e.target)){
-            setAddProductClick(false)
-        }
-    }
+
+
+ 
 
     const userId = useSelector((state) => state.user.value.id);
     const dispatch = useDispatch();
@@ -96,9 +105,9 @@ const onSubmit = (data)=>{
     
   
     return(
-        <div className="shopform">
+        <div className="shopform" ref={refclick1}>
 
-            <div className= { addProductClick? "addproduct" :'addproductoff'} ref={refclick} >
+            <div className= { addProductClick? "addproduct" :'addproductoff'}  >
                 <div className="addproductIcon"><FaRegTimesCircle onClick={handleAddProductClick /*newSignInClickStatus*/}/></div>
                 <form onSubmit={handleSubmit(onSubmit)}>
                     <input type="text" placeholder="Product Name..." {...register("ProductName")} />

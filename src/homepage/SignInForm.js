@@ -106,13 +106,11 @@ const onSubmit = (data)=>{
                     <input type="submit" />
                    {/*  <p>{message}</p> */}
                 </form>
-                <div className="inapiMessage">
+                {/* <div className="inapiMessage">
                     {loginErrorText.split('\n').map((paragraph, index) => {
                         return <h2 key={index}>{paragraph}</h2>;
                     })}
-                     
-                    {/* <h2>{String(signInstatusclick)}</h2> */}
-                </div>
+                </div> */}
 
                 
             </div>

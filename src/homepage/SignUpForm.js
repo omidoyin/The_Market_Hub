@@ -109,9 +109,9 @@ const onSubmit = (data)=>{
                     <input type="submit" />
                    {/*  <p>{message}</p> */}
                 </form>
-                <div className="apiMessage">
+                {/* <div className="apiMessage">
                     <h2> error message {loginErrorText}</h2>
-                </div>
+                </div> */}
 
                 
             </div>

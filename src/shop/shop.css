@@ -309,11 +309,12 @@
    position: fixed;
    display: flex;
    flex-direction: column;
-   top: 200px;
+   top: 100px;
    margin-bottom: 50rem;
    align-items: center;
    align-content: center;
-   min-height: 70%;
+   /* min-height: 70%; */
+   min-height: 33rem;
    min-width:330px;
    /* width: 30%; */
 
@@ -375,7 +376,7 @@
 
  .shop .shopform form input{
    padding: .3rem;
-   margin: .3rem;
+   margin: .2rem;
    height: 15%;
    border-radius: .5rem; 
    border: solid rgb(81, 81, 88) 0.2px;
@@ -389,7 +390,7 @@
  }
  .shop .shopform p {
   color: rgb(214, 22, 22);
-  font-size: 18px;
+  font-size: 15px;
   margin: 0;
  }
 

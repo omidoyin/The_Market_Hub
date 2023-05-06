@@ -21,14 +21,21 @@ const EditProduct = () => {
     const handleMouseLeave = () => {
         seteditproductclick(false)
     }
-    // useEffect(()=>{document.addEventListener("click", handleClickOutside, true)}, [])
-
+    
     const refclick = useRef(null)
-    const handleClickOutside =(e) => {
-        if(!refclick.current.contains(e.target)){
-            seteditproductclick(false)
+    useEffect(()=>{
+        const handleClickOutside =(e) => {
+            if(!refclick.current.contains(e.target)){
+                seteditproductclick(false)
+            }
         }
-    }
+        window.addEventListener("click", handleClickOutside, true);
+        return () => {window.removeEventListener("click", handleClickOutside, true)}
+    
+    }, [])
+
+    
+   
   
 
 

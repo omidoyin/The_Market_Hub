@@ -128,9 +128,9 @@ const properties ={
                            {...properties}
                             
                             >
-                               {movies.map((movie1,index) => (
+                               {movies.map((movie1, index) => (
                                 <div>
-                                 <RecentPageCard movie1={movie1} index={index}  />
+                                 <RecentPageCard movie1={movie1} key={index}  />
                                  </div>
                                ))}
                             </Slider>
@@ -164,7 +164,7 @@ const properties ={
                 ? (
                   <div className="container2">
                     {movies.map((movie, index) => (
-                      <HomePageCard movie={movie} index={index}/>
+                      <HomePageCard movie={movie} key={index}/>
                     ))}
                   </div>
                 ): (
